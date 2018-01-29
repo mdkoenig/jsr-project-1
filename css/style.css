@@ -247,6 +247,10 @@ body {
     clear: both;
 }
 
+.chat-pane {
+  overflow-y: auto;
+}
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
