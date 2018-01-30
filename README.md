@@ -30,3 +30,11 @@
 * A working chatbot hosted somewhere publicly accessible (CodePen, Github Pages, etc.)
 * A new git respository containing your code
 * A `README.md` file with explanations of what your bot does, what commands it responds to, the approach taken, unsolved problems, etc.
+
+## Mark's Hal-Bot
+
+Commands
+* "How are you doing?" - will respond with a random feeling that Hal is feeling
+* "Good morning, Dave." - will repsond with the classic phrase in reverse aka "Good morning, Hal."
+* "Do you have any friends?" - will respond with a random friend from the class list
+* # activities : anything that has a number and the word "activities" - will respond with that many activities that Hal enjoys
