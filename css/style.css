@@ -113,6 +113,19 @@ body {
 
 }
 
+#commands {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 400px;
+  background-color:rgb(125,125,125);
+  display: visible;
+}
+
+#show-commands {
+  margin: 20px;
+}
+
 #chatbot {
   margin: 20px;
   width: 50%;
@@ -175,6 +188,10 @@ body {
 
 .hidden {
     display: none !important;
+}
+
+.block {
+    display: block;
 }
 
 /*

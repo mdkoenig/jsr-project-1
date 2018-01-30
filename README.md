@@ -31,10 +31,14 @@
 * A new git respository containing your code
 * A `README.md` file with explanations of what your bot does, what commands it responds to, the approach taken, unsolved problems, etc.
 
-## Mark's Hal-Bot
+## Mark's Hal-Bot v1.0
 
 Commands
 * "How are you doing?" - will respond with a random feeling that Hal is feeling
 * "Good morning, Dave." - will repsond with the classic phrase in reverse aka "Good morning, Hal."
 * "Do you have any friends?" - will respond with a random friend from the class list
 * # activities : anything that has a number and the word "activities" - will respond with that many activities that Hal enjoys
+
+* First pass is simple to get the core requirements done without anything too fancy.
+* Activities without a number will show one automatically.
+* Added a button to show and hide the commands to make it easier to work with it

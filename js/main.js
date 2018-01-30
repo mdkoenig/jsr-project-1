@@ -7,9 +7,26 @@
 
 // invoke the opening message
 
- var input = document.getElementById("chatInput");
-
+var input = document.getElementById("chatInput");
 input.addEventListener("keypress",logInput);
+
+var commands = document.getElementById("show-commands");
+commands.addEventListener("click",showCommands);
+
+function showCommands()
+{
+	console.log("Got here");
+	var commands = document.getElementById("commands");
+	console.log("Class: " + commands.className);
+	if(commands.className === "hidden") {
+		commands.className = "block";
+		document.getElementById("show-commands").innerHTML = "Hide commands";
+	}
+	else {
+		commands.className = "hidden";
+		document.getElementById("show-commands").innerHTML = "Show commands";
+	}
+}
 
 function logInput() {
 	console.log("Something happened");
@@ -39,8 +56,10 @@ function write(user, phrase)
 function halResponse(phrase)
 {
 	console.log(typeof phrase);
-	if (phrase === "Good morning, Dave.") {
-		write("hal","Good morning, Hal.");
+	var x = phrase.indexOf("activities");
+	console.log("X: " + x);
+	if (phrase === "Good morning, Hal.") {
+		write("hal","Good morning, Dave.");
 	}
 	else if (phrase === "How are you doing?") {
 		var response = "I'm feeling pretty " + random("feeling");
@@ -51,7 +70,7 @@ function halResponse(phrase)
 		var response = "Yeah, my best friend is " + random("friend");
 		write("hal", response);
 	}
-	else if (phrase.indexOf("activities")) {
+	else if (phrase.indexOf("activities") > 0) {
 		var regEx = /[0-9]/g;
 		var number = phrase.match(regEx);
 		if(number === null) {
@@ -59,7 +78,10 @@ function halResponse(phrase)
 		}
 		var response = "My " + number + " favorite acitivites are " + activities(number);
 		write("hal", response);	
-	} 
+	}
+	else {
+		write("hal","I'm sorry, I don't understand.");
+	}
 }
 
 function random(type) 
